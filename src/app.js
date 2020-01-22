@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", routes);
 
-const URL_MONGODB = 'mongodb+srv://workshop:ck84iHOhtzNuwepr@cluster0-wp32v.mongodb.net/test?retryWrites=true&w=majority';
+const URL_MONGODB ="mongodb+srv://workshop:ck84iHOhtzNuwepr@cluster0-wp32v.mongodb.net/test?retryWrites=true&w=majority";
 
 app.listen(8080, err => {
   if (err) throw err;

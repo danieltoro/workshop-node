@@ -1,9 +1,9 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const User = require('./user');
+const User = require("./user");
 
-mongoose.set('debug', true);
+mongoose.set("debug", true);
 
 module.exports = {
-    User,
-}
+  User
+};

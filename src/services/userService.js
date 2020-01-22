@@ -1,28 +1,28 @@
-const { User } = require('../models');
+const { User } = require("../models");
 
 const getList = async () => {
+  const users = await User.find({}).exec();
 
-    const users = await User.find({}).exec();
+  console.log(users);
+  return users;
+};
 
-    console.log(users);
-    return users;
-}
+const createUser = name => {
+  const user = new User({ name });
 
-const createUser = (name) => {
-    const user = new User({name});
-
-    return user.save()
-        .then((data) => {
-            console.log(data);
-            return true;
-        })
-        .catch((err) => {
-            console.log(err);
-            return false;
-        });
-}
+  return user
+    .save()
+    .then(data => {
+      console.log(data);
+      return true;
+    })
+    .catch(err => {
+      console.log(err);
+      return false;
+    });
+};
 
 module.exports = {
-    getList,
-    createUser,
+  getList,
+  createUser
 };
